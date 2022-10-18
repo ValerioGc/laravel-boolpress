@@ -6,7 +6,7 @@
         <div class=" d-inline-block">
             <div class="div3">
                 <h3 class="d-inline-block post-title">{{ post.title }}</h3>
-                <button>Vedi Post</button>
+                <router-link :to="{name: '', params: {slug: post.slug}}" class="show-post">Vedi Post</router-link>
                 <hr class="my-3"/>
                 <p>{{ truncateText(post.content, 100) }}</p>
             </div>
@@ -20,7 +20,6 @@
                 </div>
             </div>
         </div>
-
     </li>
 </template>
 
@@ -64,9 +63,9 @@ export default {
         border-radius: 10px;
         width: 50vw;
 
-hr {
-    color: #a1cbef;
-}
+        hr {
+            color: #a1cbef;
+        }
         .info-post {
             display: flex;
             justify-content: space-between;
@@ -95,7 +94,7 @@ hr {
             font-weight: 500;
         }
     }
-    button   {
+    .show-post   {
         position: absolute;
         right: 3rem;
         border-radius: 5px;

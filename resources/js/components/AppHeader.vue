@@ -10,8 +10,8 @@
                 <i class="fa-2x fa-solid fa-bars"></i>
             </a>
             <ul class="navItems" :class="(showMobileMenu === true)? 'd-none':'d-flex'">
-                <li v-for="(item, index) in navItems" :key="index"> <!-- :class="( == item)?'active':''"-->
-                    <a :href="item.link">{{item.page}}</a>
+                <li v-for="(item, index) in navItems" :key="index"> <!-- :class="( getRouteName() == .routeName)?'active':''"-->
+                    <router-link :to="{name: item.routeName}" >{{item.page}}</router-link>
                 </li>
             </ul>
         </nav>
@@ -37,19 +37,19 @@
                 navItems: [
                     {
                         page:'Home',
-                        link:'#'
+                        routeName: 'home'
                     },
                     {
-                        page:'Post',
-                        link:'#'
+                        page:'Blog',
+                        routeName: 'blog'
                     },
                     {
-                        page:'Post Recenti',
-                        link:'#'
+                        page:'Contatti',
+                        routeName: 'contact'
                     },
                     {
-                        page:'Categorie',
-                        link:'#'
+                        page:'About Us',
+                        routeName: 'about-us'
                     }
                 ]
             }

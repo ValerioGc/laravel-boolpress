@@ -9,8 +9,8 @@
 
 <script>
 
-    import appHeader from "../components/appHeader";
-    import appMain from "../components/appMain";
+    import appHeader from "../components/AppHeader";
+    import appMain from "../components/AppMain";
 
     export default {
         name: 'App',
