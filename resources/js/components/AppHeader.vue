@@ -10,7 +10,7 @@
                 <i class="fa-2x fa-solid fa-bars"></i>
             </a>
             <ul class="navItems" :class="(showMobileMenu === true)? 'd-none':'d-flex'">
-                <li v-for="(item, index) in navItems" :key="index"> <!-- :class="( getRouteName() == .routeName)?'active':''"-->
+                <li v-for="(item, index) in navItems" :key="index" :class="($route.name === item.routeName)?'active':'' ">
                     <router-link :to="{name: item.routeName}" >{{item.page}}</router-link>
                 </li>
             </ul>
@@ -64,7 +64,8 @@
         position: fixed;
         top: 0;
         z-index: 99;
-        background-color: #909fa9;
+        background-color: $ice;
+
         box-shadow: 2px 2px 5px #000;
 
         .logo {
@@ -126,5 +127,4 @@
             }
         }
     }
-
 </style>

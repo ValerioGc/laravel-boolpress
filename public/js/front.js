@@ -2206,7 +2206,8 @@ var render = function render() {
     "class": _vm.showMobileMenu === true ? "d-none" : "d-flex"
   }, _vm._l(_vm.navItems, function (item, index) {
     return _c("li", {
-      key: index
+      key: index,
+      "class": _vm.$route.name === item.routeName ? "active" : ""
     }, [_c("router-link", {
       attrs: {
         to: {
@@ -2397,7 +2398,9 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("h1", [_vm._v("ERRORE 404 - risorsa non trovata")])]);
+  return _c("div", {
+    staticClass: "error-container"
+  }, [_c("h1", [_vm._v("ERRORE 404 - risorsa non trovata")])]);
 }];
 render._withStripped = true;
 
@@ -2605,7 +2608,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".pagination[data-v-04b78e6e] {\n  flex-direction: row !important;\n  width: 100%;\n}\n.pagination .active-page[data-v-04b78e6e] {\n  background-color: blue;\n  color: #fff;\n}\nul[data-v-04b78e6e] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 80%;\n  margin: auto;\n}\nul li[data-v-04b78e6e] {\n  margin: 2rem 0;\n}\n.page-item:last-child .page-link[data-v-04b78e6e] {\n  border-top-right-radius: 0.25rem;\n  border-bottom-right-radius: 0.25rem;\n}\n.page-link[data-v-04b78e6e] {\n  position: relative;\n  display: block;\n  padding: 0.5rem 0.75rem;\n  margin-left: -1px;\n  line-height: 1.25;\n  color: #3490dc;\n  background-color: #fff;\n  border: 1px solid #dee2e6;\n}\n.pagination[data-v-04b78e6e] {\n  display: flex;\n  padding-left: 0;\n  list-style: none;\n  border-radius: 0.25rem;\n  flex-direction: row !important;\n  width: 100%;\n}", ""]);
+exports.push([module.i, ".pagination[data-v-04b78e6e] {\n  flex-direction: row !important;\n  width: 100%;\n}\n.pagination .active-page[data-v-04b78e6e] {\n  background-color: blue;\n  color: #fff;\n}\nul[data-v-04b78e6e] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 80%;\n  margin: auto;\n}\nul li[data-v-04b78e6e] {\n  margin: 2rem 0;\n}", ""]);
 
 // exports
 
