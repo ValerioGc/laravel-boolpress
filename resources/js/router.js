@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 
 import HomePage from './pages/HomePage.vue';
 import PostsPage from './pages/PostsPage.vue';
+import DettPost from './pages/DettPost.vue';
 import ContactPage from './pages/ContactPage.vue';
 import AboutPage from './pages/AboutPage.vue';
 import Error404 from './pages/Error404.vue';
@@ -23,7 +24,6 @@ const router = new VueRouter({
             name: 'blog',
             component: PostsPage
         },
-
         {
             path: '/contact',
             name: 'contact',
@@ -33,6 +33,11 @@ const router = new VueRouter({
             path: '/about-us',
             name: 'about-us',
             component: AboutPage
+        },
+        {
+            path: '/blog/:slug',
+            name: 'dett-post',
+            component: DettPost
         },
         {
             path: '/*',

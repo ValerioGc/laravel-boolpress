@@ -29,3 +29,75 @@ body {
   display: inline-block !important;
 }
 
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: #F0F2F2;
+  box-shadow: 2px 2px 5px #000;
+}
+
+header .logo {
+  width: 50px;
+  padding: 1rem 0;
+}
+
+header .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 978px) {
+  header .hamburger {
+    display: inline-block;
+  }
+}
+
+header nav {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .navItems {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+  align-items: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 978px) {
+  header nav .navItems {
+    display: none;
+    flex-direction: column;
+    background-color: #94a6ab;
+    border-bottom: 2px solid green;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 5rem;
+    color: black;
+  }
+}
+
+header nav .navItems .active {
+  border-color: blue;
+}
+
+header nav .navItems li {
+  border-bottom: 3px solid transparent;
+}
+
+header nav .navItems li:hover {
+  border-color: blue;
+}
+
+header nav .navItems li a {
+  line-height: 5rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+

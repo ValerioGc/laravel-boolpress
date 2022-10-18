@@ -6,10 +6,10 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Logo">
                 </a>
             </div>
-            <a href="#" class="hamburger"  @click.prevent="showMenu()">
+            <a href="#" class="hamburger" @click.prevent="showMenu()">
                 <i class="fa-2x fa-solid fa-bars"></i>
             </a>
-            <ul class="navItems" :class="(showMobileMenu === true)? 'd-none':'d-flex'">
+            <ul class="navItems" :class="(showMobileMenu === true)? 'd-none':''">
                 <li v-for="(item, index) in navItems" :key="index" :class="($route.name === item.routeName)?'active':'' ">
                     <router-link :to="{name: item.routeName}" >{{item.page}}</router-link>
                 </li>

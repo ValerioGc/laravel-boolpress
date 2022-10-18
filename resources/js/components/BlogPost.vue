@@ -6,7 +6,9 @@
         <div class=" d-inline-block">
             <div class="div3">
                 <h3 class="d-inline-block post-title">{{ post.title }}</h3>
-                <router-link :to="{name: '', params: {slug: post.slug}}" class="show-post">Vedi Post</router-link>
+
+                <router-link :to="{name: 'dett-post', params: {slug: post.slug}}" class="show-post">Vedi Post</router-link>
+
                 <hr class="my-3"/>
                 <p>{{ truncateText(post.content, 100) }}</p>
             </div>
@@ -54,6 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
     .post {
         background-color: #ffffff;
         margin: 3rem auto;
