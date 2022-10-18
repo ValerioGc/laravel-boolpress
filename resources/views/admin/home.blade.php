@@ -2,32 +2,6 @@
 
 @section('page-title', 'Area Amministrativa')
 
-@section('style')
-    .notification {
-        height: 35vh;
-    }
-    .notification-container {
-        height: 50vh;
-    }
-    #home-container {
-        width: 85%!important
-    }
-
-    /* Scrollbar Nofifiche */
-    #home-container ul::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        background-color: #F5F5F5;
-    }
-    #home-container ul::-webkit-scrollbar {
-        width: 10px;
-        background-color: #F5F5F5;
-    }
-    #home-container ul::-webkit-scrollbar-thumb {
-        background-color: #5e7e8a;
-        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%,transparent)
-    }
-@endsection
-
 @section('content')
     <div class="container-fluid" id="home-container">
         <div class="row not my-5">

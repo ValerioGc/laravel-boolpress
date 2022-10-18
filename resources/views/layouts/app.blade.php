@@ -10,7 +10,7 @@
         <title>@yield('page-title')</title>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/admin.js') }}" defer></script>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -21,6 +21,7 @@
         <!-- Link esterni -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="@yield('ext-cdn')">
+
         <style>
             * {
                 margin: 0;
@@ -50,8 +51,30 @@
                 background-color: #0ae;
                 background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
             }
-            /*Stile Aggiuntivo*/
-            @yield('style')
+
+            .notification {
+                height: 35vh;
+            }
+            .notification-container {
+                height: 50vh;
+            }
+            #home-container {
+                width: 85%!important
+            }
+
+            /* Scrollbar Nofifiche */
+            #home-container ul::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                background-color: #F5F5F5;
+            }
+            #home-container ul::-webkit-scrollbar {
+                width: 10px;
+                background-color: #F5F5F5;
+            }
+            #home-container ul::-webkit-scrollbar-thumb {
+                background-color: #5e7e8a;
+                background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%,transparent)
+            }
         </style>
     </head>
     <body class="alert-primary overflow-hidden">
