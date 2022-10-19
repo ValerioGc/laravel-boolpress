@@ -11,33 +11,7 @@
  |
  */
 
-    const argv = require('minimist')(process.argv.slice(2));
-
-    const src = {
-        user: {
-            js: 'resources/js/app.js',
-            sass: 'resources/sass/app.scss'
-        },
-        admin: {
-            js: 'resources/js/admin.js',
-            sass: 'resources/sass/admin.scss'
-        }
-    }
-    const dest = {
-        js: 'public/js',
-        sass: 'public/css'
-    }
-    // User
-    if (argv.user) {
-        mix.js(src.user.js, dest.js)
-            .sass(src.user.sass, dest.sass);
-    }
-    // Admin
-    else if (argv.admin) {
-        mix.js(src.admin.js, dest.js)
-            .sass(src.admin.sass, dest.sass);
-    }
-    else {
-        mix.js(src.user.js, dest.js)
-            .sass(src.user.sass, dest.sass);
-    }
+    mix.js('resources/js/app.js', 'public/js')
+        .js('resources/js/front.js', 'public/js')
+        .sass('resources/sass/app.scss', 'public/css')
+        .sass('resources/sass/admin.scss', 'public/css')

@@ -58,7 +58,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+@import "./resources/sass/palette.scss";
     header {
         width: 100%;
         position: fixed;
