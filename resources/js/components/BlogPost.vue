@@ -91,7 +91,6 @@ export default {
             color: $ice;
             padding: 5px;
 
-
             @media screen and (max-width: 978px){
                 right: 50%;
                 transform: translateX(50%);
