@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import 'partials/variables';
 
-@import 'adminGeneral';
+@import 'partials/adminGeneral';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

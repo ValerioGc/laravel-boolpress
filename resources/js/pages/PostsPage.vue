@@ -90,6 +90,14 @@
         margin: auto;
 
 
+        @media screen and (max-width: 1100px){
+            width: 100%;
+        }
+
+        @media screen and (max-width: 978px){
+            width: 100%;
+
+        }
         li {
             margin: 2rem 0;
         }

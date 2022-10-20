@@ -2,15 +2,16 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="#">
+                <router-link :to="{name: 'home'}" >
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Logo">
-                </a>
+                </router-link>
             </div>
             <a href="#" class="hamburger" @click.prevent="showMenu()">
                 <i class="fa-2x fa-solid fa-bars"></i>
             </a>
             <ul class="navItems" :class="(showMobileMenu === true)? 'd-none':''">
-                <li v-for="(item, index) in navItems" :key="index" :class="($route.name === item.routeName)?'active':'' ">
+                <li v-for="(item, index) in navItems" :key="index"
+                    :class="($route.name === item.routeName)?'active':'' ">
                     <router-link :to="{name: item.routeName}" >{{item.page}}</router-link>
                 </li>
             </ul>
@@ -23,12 +24,7 @@
         name:'appHeader',
         methods: {
           showMenu() {
-              if (this.showMobileMenu !== true) {
-                this.showMobileMenu = true;
-              }
-              else {
-                  this.showMobileMenu = false;
-              }
+              this.showMobileMenu = this.showMobileMenu !== true;
           }
         },
         data() {
@@ -58,15 +54,24 @@
 </script>
 
 <style lang="scss" scoped>
-@import "./resources/sass/palette.scss";
+
+    @import "../../sass/partials/palette";
+    .d-none{
+        display: none!important;
+    }
+
+    @keyframes test {
+        0% {height: 0}
+        100% {height: 100%}
+    }
+
     header {
         width: 100%;
-        position: fixed;
-        top: 0;
+        background-color: $blue-secondary;
         z-index: 99;
-        background-color: $ice;
-
-        box-shadow: 2px 2px 5px #000;
+        position: sticky;
+        top: 0;
+        box-shadow: 2px 2px 5px $dark;
 
         .logo {
             width: 50px;
@@ -82,46 +87,70 @@
         }
 
         nav  {
-            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
 
             .navItems  {
                 display: flex;
                 justify-content: space-between;
-                flex-basis: 50%;
+                flex-basis: 40%;
                 align-items: center;
                 margin:0;
+                text-align: center;
+
 
                 @media screen and (max-width: 978px){
-                    display: none;
                     flex-direction: column;
-                    background-color: #94a6ab;
+                    background-color: $ice;
+                    color: black;
                     border-bottom: 2px solid green;
-                    position: absolute;
                     text-align: center;
+                    position: absolute;
                     left: 0;
                     right: 0;
                     top: 5rem;
-                    color: black;
+                    transition:all 1s linear 0.1s;
+                    animation: test 1s linear;
                 }
 
                 .active {
-                    border-color: blue;
+                    border-color: $light-blue-dark;
+
+                    a {
+                        color: $light-blue-dark;
+                    }
+
                 }
 
                 li {
-                    border-bottom: 3px solid transparent;
-                     &:hover {
-                         border-color: blue;
+                    border-bottom: 2px solid transparent;
+                    width: 20%;
 
+                    @media screen and (max-width: 1100px){
+                        width: 25%;
+
+                    }
+                    @media screen and (max-width: 976px){
+                        display: block;
+                        width: 100%;
+                    }
+
+                     &:hover {
+                         border-color: $light-blue-dark;
+
+                         a {
+                             color: $light-blue-dark;
+                         }
                      }
 
                     a {
-                        line-height: 5rem;
+                        line-height: 5.5rem;
                         font-size: 18px;
                         font-weight: bold;
+                        text-shadow: 1px 1px 1px $dark;
+                        color: $ice;
                     }
                 }
             }

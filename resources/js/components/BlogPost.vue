@@ -1,23 +1,22 @@
 <template>
     <li class="post parent">
-        <div class="pr-2 d-inline-block" style="    vertical-align: top;">
-            <img style="vertical-align: unset; height: 50px" :src="post.cover" :alt="`Copertina ${post.title}`">
+        <div style="width: 10rem;height: 100%;flex-shrink: 0;">
+            <img :src="post.cover" :alt="`Copertina ${post.title}`">
         </div>
-        <div class=" d-inline-block">
-            <div class="div3">
-                <h3 class="d-inline-block post-title">{{ post.title }}</h3>
-
+        <div>
+            <div>
+                <h3 class="post-title">{{ post.title }}</h3>
                 <router-link :to="{name: 'dett-post', params: {slug: post.slug}}" class="show-post">Vedi Post</router-link>
 
                 <hr class="my-3"/>
                 <p>{{ truncateText(post.content, 100) }}</p>
             </div>
             <div class="info-post">
-                <div class="post-category d-inline-block">
+                <div class="post-category">
                     <p>{{ post.category.title }}</p>
                     <p v-if="post.category.length = 0">Nessuna Categoria</p>
                 </div>
-                <div class="post-date d-inline-block">
+                <div class="post-date">
                     <p>{{post.created_at}}</p>
                 </div>
             </div>
@@ -49,13 +48,14 @@ export default {
             } else {
                 return text.substring(0, maxLength) + '...';
             }
-
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+
+    @import "../../sass/partials/palette";
 
     .post {
         background-color: #ffffff;
@@ -65,14 +65,31 @@ export default {
         box-shadow: 0 0 6px black;
         border-radius: 10px;
         width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 90%;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 978px){
+            flex-direction: column;
+        }
 
         hr {
-            color: #a1cbef;
+            color: $blue-secondary;
+            margin: 0.8rem 0 1rem;
+            background-color:  $blue-secondary;
+            height: 5px;
+
         }
         .info-post {
             display: flex;
             justify-content: space-between;
             padding: 1rem 0;
+            align-items: center;
         }
 
         .post-title {
@@ -98,8 +115,10 @@ export default {
         }
     }
     .show-post   {
+        text-align: center;
         position: absolute;
         right: 3rem;
+        top: 1rem;
         border-radius: 5px;
         background-color: rgba(89, 164, 238, 0.8);
         border: 1px solid black;
@@ -110,6 +129,7 @@ export default {
                 right: 50%;
                 transform: translateX(50%);
                 bottom: 20px;
+                top: unset;
             }
     }
 </style>

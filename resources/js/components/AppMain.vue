@@ -15,7 +15,7 @@
 <style lang="scss" scoped>
     main {
         background-color: #c7c7c7;
-        min-height: calc(100vh - 5rem);
-        margin-top: 5rem;
+        min-height: calc(100vh - 11vh);
+        padding: 3rem 0;
     }
 </style>

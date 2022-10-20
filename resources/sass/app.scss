@@ -1,14 +1,18 @@
-@import 'palette';
+@import 'partials/palette';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-overflow: ellipsis;
 }
 
 ul {
     list-style: none;
 
+
+    li,
+    a,
     li:hover,
     a:hover {
         text-decoration: none!important;
@@ -30,3 +34,19 @@ body {
 .show {
     display: inline-block!important;
 }
+
+//Scrollbar
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #0000004C;
+    background-color: $ice;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: $ice;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $blue-secondary;
+    background-image: -webkit-linear-gradient(45deg, #FFFFFF33 25%, transparent 25%, transparent 50%, #FFFFFF33 50%, #FFFFFF33 75%, transparent 75%, transparent)
+}
+
+
