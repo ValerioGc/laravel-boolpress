@@ -1,5 +1,5 @@
 <template>
-    <li class="post parent">
+    <li class="post">
         <div style="width: 10rem;height: 100%;flex-shrink: 0;">
             <img :src="post.cover" :alt="`Copertina ${post.title}`">
         </div>
@@ -69,13 +69,35 @@ export default {
         align-items: center;
         justify-content: space-between;
 
+        @media screen and (max-width: 978px){
+            flex-direction: column;
+        }
+
         img {
             width: 90%;
             margin: auto;
         }
 
-        @media screen and (max-width: 978px){
-            flex-direction: column;
+        .show-post   {
+            text-align: center;
+            position: absolute;
+            right: 3rem;
+            top: 1rem;
+            border-radius: 5px;
+            background-color: $light-blue-dark;
+            border: 1px solid black;
+            box-shadow: 0 0 5px $dark;
+            width: 90px;
+            color: $ice;
+            padding: 5px;
+
+
+            @media screen and (max-width: 978px){
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 20px;
+                top: unset;
+            }
         }
 
         hr {
@@ -85,6 +107,7 @@ export default {
             height: 5px;
 
         }
+
         .info-post {
             display: flex;
             justify-content: space-between;
@@ -114,22 +137,5 @@ export default {
             font-weight: 500;
         }
     }
-    .show-post   {
-        text-align: center;
-        position: absolute;
-        right: 3rem;
-        top: 1rem;
-        border-radius: 5px;
-        background-color: rgba(89, 164, 238, 0.8);
-        border: 1px solid black;
-        box-shadow: 0 0 5px #000;
-        width: 90px;
 
-            @media screen and (max-width: 978px){
-                right: 50%;
-                transform: translateX(50%);
-                bottom: 20px;
-                top: unset;
-            }
-    }
 </style>

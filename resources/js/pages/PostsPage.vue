@@ -89,19 +89,19 @@
         width: 80%;
         margin: auto;
 
-
         @media screen and (max-width: 1100px){
-            width: 100%;
+            width: 90%;
         }
 
         @media screen and (max-width: 978px){
             width: 100%;
-
         }
+
         li {
             margin: 2rem 0;
         }
     }
+
     .page-item:last-child .page-link {
         border-top-right-radius: 0.25rem;
         border-bottom-right-radius: 0.25rem;
