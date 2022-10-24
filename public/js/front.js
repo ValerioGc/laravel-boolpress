@@ -2042,6 +2042,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       post: null
     };
   },
+  beforeMount: function beforeMount() {
+    this.getPostDetails();
+  },
   methods: {
     getPostDetails: function getPostDetails() {
       var _this = this;
@@ -2079,9 +2082,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, null, [[1, 8]]);
       }))();
     }
-  },
-  beforeMount: function beforeMount() {
-    this.getPostDetails();
   }
 });
 
@@ -2466,7 +2466,9 @@ var render = function render() {
       src: _vm.post.cover,
       alt: _vm.post.title
     }
-  }), _vm._v(" "), _c("h2", [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.post.content))])])]) : _c("div", {
+  }), _vm._v(" "), _c("h2", {
+    staticClass: "post-title"
+  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.post.content))])])]) : _c("div", {
     staticClass: "loading-alert"
   }, [_c("i", {
     staticClass: "fa-3x fa-spin fa-solid fa-spinner"
@@ -2736,7 +2738,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".post-details-container[data-v-6cf6650a] {\n  border-radius: 5px;\n  width: 70%;\n  margin: 2rem auto;\n  background-color: #F0F2F2;\n  text-align: center;\n}\n.post-details-container i[data-v-6cf6650a] {\n  display: block;\n}\n.post-details-container .loading-alert[data-v-6cf6650a] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 4rem 0;\n}\n.post-details-container .btn[data-v-6cf6650a] {\n  display: inline-block;\n  box-shadow: 0 0 5px #000;\n  background-color: white;\n  border-radius: 5px;\n  padding: 5px 10px;\n  margin: 2rem 0;\n}\n.post-details-container article[data-v-6cf6650a] {\n  padding: 2rem;\n}\n.post-details-container article .post-info[data-v-6cf6650a] {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1rem 0;\n}\n.post-details-container article hr[data-v-6cf6650a] {\n  margin: 1rem auto;\n  background-color: white;\n}\n.post-details-container article p[data-v-6cf6650a] {\n  text-align: left;\n}\n.post-details-container article .post-content[data-v-6cf6650a] {\n  width: 50%;\n  margin: auto;\n}", ""]);
+exports.push([module.i, ".post-details-container[data-v-6cf6650a] {\n  border-radius: 5px;\n  width: 70%;\n  margin: 2rem auto;\n  background-color: #F0F2F2;\n  text-align: center;\n}\n.post-details-container i[data-v-6cf6650a] {\n  display: block;\n}\n.post-details-container .loading-alert[data-v-6cf6650a] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 4rem 0;\n}\n.post-details-container article[data-v-6cf6650a] {\n  padding: 2rem;\n}\n.post-details-container article .post-info[data-v-6cf6650a] {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1rem 0;\n}\n.post-details-container article hr[data-v-6cf6650a] {\n  margin: 1rem auto;\n  background-color: #393E59;\n  border-color: #393E59;\n  padding: 2px;\n  box-shadow: 1px 0 2px #000000;\n}\n.post-details-container article p[data-v-6cf6650a] {\n  text-align: left;\n}\n.post-details-container article .post-content[data-v-6cf6650a] {\n  width: 50%;\n  margin: auto;\n}\n.post-details-container article .post-content img[data-v-6cf6650a] {\n  margin: 1rem 0;\n}\n.post-details-container article .post-content .post-title[data-v-6cf6650a] {\n  text-transform: capitalize;\n  color: #010326;\n}\n.post-details-container .btn[data-v-6cf6650a] {\n  display: inline-block;\n  box-shadow: 0 0 5px #4C5059;\n  text-shadow: 0 0 3px #000000;\n  color: #F0F2F2;\n  border-radius: 5px;\n  padding: 5px 10px;\n  margin: 2rem 0;\n  text-decoration: none;\n  background-color: #393E59;\n  font-weight: 600;\n}", ""]);
 
 // exports
 

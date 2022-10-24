@@ -12,7 +12,7 @@
             </div>
             <div class="post-content">
                 <img class="post-img" :src="post.cover" :alt="post.title" />
-                <h2>{{post.title}}</h2>
+                <h2 class="post-title">{{post.title}}</h2>
                 <hr />
                 <p>{{post.content}}</p>
             </div>
@@ -35,6 +35,9 @@
                 post: null
             }
         },
+        beforeMount() {
+            this.getPostDetails();
+        },
         methods: {
             async getPostDetails() {
                 const slug = this.$route.params.slug;
@@ -46,9 +49,6 @@
                     await this.$router.push({name: 'not-found'});
                 }
             },
-        },
-        beforeMount() {
-            this.getPostDetails();
         }
     }
 
@@ -77,14 +77,6 @@
             padding: 4rem 0;
         }
 
-        .btn {
-            display: inline-block;
-            box-shadow: 0 0 5px #000;
-            background-color: white;
-            border-radius: 5px;
-            padding: 5px 10px;
-            margin: 2rem 0;
-        }
 
         article {
             padding: 2rem;
@@ -98,7 +90,10 @@
 
             hr {
                 margin: 1rem auto;
-                background-color:white;
+                background-color:$blue-secondary;
+                border-color:$blue-secondary;
+                padding: 2px;
+                box-shadow: 1px 0 2px #000000;
             }
 
             p {
@@ -108,9 +103,29 @@
             .post-content {
                 width: 50%;
                 margin: auto;
+
+                img {
+                    margin: 1rem 0;
+                }
+
+                .post-title {
+                    text-transform: capitalize;
+                    color: $blue-primary;
+                }
             }
         }
+        .btn {
+            display: inline-block;
+            box-shadow: 0 0 5px $grey-dark;
+            text-shadow: 0 0 3px $dark;
+            color: $ice;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 2rem 0;
+            text-decoration: none;
+            background-color: $blue-secondary;
+            font-weight: 600;
+        }
     }
-
 
 </style>
