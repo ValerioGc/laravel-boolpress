@@ -59,16 +59,13 @@
     @import "../../sass/partials/palette";
 
     .post-details-container {
+        min-height: 70vh;
         border-radius: 5px;
         width: 70%;
         margin: 2rem auto;
         background-color: $ice;
         text-align: center;
 
-
-        i {
-            display: block;
-        }
 
         .loading-alert {
             display: flex;
@@ -90,8 +87,8 @@
 
             hr {
                 margin: 1rem auto;
-                background-color:$blue-secondary;
-                border-color:$blue-secondary;
+                background-color: $blue-secondary;
+                border-color: $blue-secondary;
                 padding: 2px;
                 box-shadow: 1px 0 2px #000000;
             }
@@ -118,13 +115,21 @@
             display: inline-block;
             box-shadow: 0 0 5px $grey-dark;
             text-shadow: 0 0 3px $dark;
+            background-color: $blue-secondary;
             color: $ice;
             border-radius: 5px;
             padding: 5px 10px;
             margin: 2rem 0;
             text-decoration: none;
-            background-color: $blue-secondary;
             font-weight: 600;
+
+            &:hover {
+                transition: all 0.3s linear 0.1s;
+                background-color: $blue-primary;
+                color: $light-blue-light;
+                box-shadow: 0 0 7px $grey-dark;
+                transform: scale(1.1);
+            }
         }
     }
 
