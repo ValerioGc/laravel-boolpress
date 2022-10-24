@@ -34,7 +34,7 @@ class PostController extends Controller
         if ($post->cover) {
             $post->cover = asset('storage/' . $post->cover);
         } else {
-            $post->cover = asset('img/no_cover.jpg');
+            $post->cover = 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
         }
 
         return response()->json([

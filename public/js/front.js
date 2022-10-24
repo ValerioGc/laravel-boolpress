@@ -2448,34 +2448,43 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "post-details-container"
-  }, [_c("router-link", {
-    attrs: {
-      to: {
-        name: "blog"
-      }
-    }
-  }, [_vm._v("Torna ai post")]), _vm._v(" "), _vm.post ? _c("article", [_c("div", {
+  }, [_vm.post ? _c("article", [_c("div", {
     staticClass: "post-info"
-  }, [_c("div", [_vm._v("\n                " + _vm._s(_vm.post.category ? _vm.post.category.name : "Nessuna categoria") + "\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_c("div", {
+    staticClass: "post-category"
+  }, [_c("p", [_c("b", [_vm._v("Categoria:")]), _vm._v(" " + _vm._s(_vm.post.category ? _vm.post.category.name : "Nessuna categoria") + " ")])]), _vm._v(" "), _c("ul", {
     staticClass: "post-tags"
-  }, _vm._l(_vm.post.tags, function (tag) {
+  }, [_vm._m(0), _vm._v(" "), _vm._l(_vm.post.tags, function (tag) {
     return _c("li", {
       key: tag.id
     }, [_vm._v(_vm._s(tag.name))]);
-  }), 0)]), _vm._v(" "), _c("img", {
+  })], 2)]), _vm._v(" "), _c("div", {
+    staticClass: "post-content"
+  }, [_c("img", {
     staticClass: "post-img",
     attrs: {
       src: _vm.post.cover,
       alt: _vm.post.title
     }
-  }), _vm._v(" "), _c("h2", [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.post.content))])]) : _c("div", [_vm._m(0)])], 1);
+  }), _vm._v(" "), _c("h2", [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.post.content))])])]) : _c("div", {
+    staticClass: "loading-alert"
+  }, [_c("i", {
+    staticClass: "fa-3x fa-spin fa-solid fa-spinner"
+  }), _vm._v(" "), _c("p", [_vm._v("Caricamento post in corso..")])]), _vm._v(" "), _c("router-link", {
+    staticClass: "btn",
+    attrs: {
+      to: {
+        name: "blog"
+      }
+    }
+  }, [_vm._v("Torna ai post")])], 1);
 };
 
 var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("span", [_vm._v("Caricamento post in corso")])]);
+  return _c("li", [_c("b", [_vm._v("Tags:")])]);
 }];
 render._withStripped = true;
 
@@ -2727,7 +2736,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".post-details-container[data-v-6cf6650a] {\n  width: 70%;\n  margin: 2rem auto;\n  background: red;\n}\n.post-details-container article[data-v-6cf6650a] {\n  background: blue;\n}", ""]);
+exports.push([module.i, ".post-details-container[data-v-6cf6650a] {\n  border-radius: 5px;\n  width: 70%;\n  margin: 2rem auto;\n  background-color: #F0F2F2;\n  text-align: center;\n}\n.post-details-container i[data-v-6cf6650a] {\n  display: block;\n}\n.post-details-container .loading-alert[data-v-6cf6650a] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 4rem 0;\n}\n.post-details-container .btn[data-v-6cf6650a] {\n  display: inline-block;\n  box-shadow: 0 0 5px #000;\n  background-color: white;\n  border-radius: 5px;\n  padding: 5px 10px;\n  margin: 2rem 0;\n}\n.post-details-container article[data-v-6cf6650a] {\n  padding: 2rem;\n}\n.post-details-container article .post-info[data-v-6cf6650a] {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1rem 0;\n}\n.post-details-container article hr[data-v-6cf6650a] {\n  margin: 1rem auto;\n  background-color: white;\n}\n.post-details-container article p[data-v-6cf6650a] {\n  text-align: left;\n}\n.post-details-container article .post-content[data-v-6cf6650a] {\n  width: 50%;\n  margin: auto;\n}", ""]);
 
 // exports
 

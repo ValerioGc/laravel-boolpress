@@ -1,25 +1,27 @@
 <template>
     <div class="post-details-container">
-        <router-link :to="{name: 'blog'}">Torna ai post</router-link>
         <article v-if="post">
             <div class="post-info">
-                <div>
-                    {{post.category?post.category.name:'Nessuna categoria'}}
+                <div class="post-category">
+                    <p><b>Categoria:</b> {{post.category ? post.category.name: 'Nessuna categoria'}} </p>
                 </div>
                 <ul class="post-tags">
+                    <li><b>Tags:</b></li>
                     <li v-for="tag in post.tags" :key="tag.id">{{tag.name}}</li>
                 </ul>
             </div>
-            <img class="post-img" :src="post.cover" :alt="post.title" />
-            <h2>{{post.title}}</h2>
-            <hr />
-            <p>{{post.content}}</p>
-        </article>
-        <div v-else>
-            <div>
-                <span>Caricamento post in corso</span>
+            <div class="post-content">
+                <img class="post-img" :src="post.cover" :alt="post.title" />
+                <h2>{{post.title}}</h2>
+                <hr />
+                <p>{{post.content}}</p>
             </div>
+        </article>
+        <div v-else class="loading-alert">
+            <i class="fa-3x fa-spin fa-solid fa-spinner"></i>
+            <p>Caricamento post in corso..</p>
         </div>
+        <router-link :to="{name: 'blog'}" class="btn">Torna ai post</router-link>
     </div>
 </template>
 
@@ -54,16 +56,61 @@
 
 <style lang="scss" scoped>
 
+    @import "../../sass/partials/palette";
+
     .post-details-container {
+        border-radius: 5px;
         width: 70%;
         margin: 2rem auto;
-        background: red;
+        background-color: $ice;
+        text-align: center;
 
+
+        i {
+            display: block;
+        }
+
+        .loading-alert {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            box-shadow: 0 0 5px #000;
+            background-color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 2rem 0;
+        }
 
         article {
+            padding: 2rem;
 
-            background: blue;
+            .post-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 1rem 0;
+            }
+
+            hr {
+                margin: 1rem auto;
+                background-color:white;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .post-content {
+                width: 50%;
+                margin: auto;
+            }
         }
     }
+
 
 </style>
