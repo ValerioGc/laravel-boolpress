@@ -3,7 +3,7 @@
         <article v-if="post">
             <div class="post-info">
                 <div class="post-category">
-                    <p><b>Categoria:</b> {{post.category ? post.category.name: 'Nessuna categoria'}} </p>
+                    <p><b>Categoria:</b> {{post.category ? post.category.title: 'Nessuna categoria'}} </p>
                 </div>
                 <ul class="post-tags">
                     <li><b>Tags:</b></li>
@@ -48,6 +48,8 @@
                 catch(err){
                     await this.$router.push({name: 'not-found'});
                 }
+                console.table(this.post);
+
             },
         }
     }

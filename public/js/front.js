@@ -2075,6 +2075,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
 
               case 12:
+                console.table(_this.post);
+
+              case 13:
               case "end":
                 return _context.stop();
             }
@@ -2452,7 +2455,7 @@ var render = function render() {
     staticClass: "post-info"
   }, [_c("div", {
     staticClass: "post-category"
-  }, [_c("p", [_c("b", [_vm._v("Categoria:")]), _vm._v(" " + _vm._s(_vm.post.category ? _vm.post.category.name : "Nessuna categoria") + " ")])]), _vm._v(" "), _c("ul", {
+  }, [_c("p", [_c("b", [_vm._v("Categoria:")]), _vm._v(" " + _vm._s(_vm.post.category ? _vm.post.category.title : "Nessuna categoria") + " ")])]), _vm._v(" "), _c("ul", {
     staticClass: "post-tags"
   }, [_vm._m(0), _vm._v(" "), _vm._l(_vm.post.tags, function (tag) {
     return _c("li", {
