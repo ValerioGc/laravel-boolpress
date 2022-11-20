@@ -1,6 +1,6 @@
 # laravel-boolpress
 
-> _Reproduction of a blog with a CMS for crreating content using CRUD, API and Laravel Auth. Front-end made with Vue-router_
+> _Reproduction of a blog with a Laravel CMS for create and manage contents using CRUD, API and Laravel Auth. Front-end made with Vue-router_
  
 <br />
 
