@@ -98,11 +98,11 @@
 ## *_Previews:_*
 
 <div align="center">
-  <img align="center" src="/previews/boolflix.gif" alt="Gif crud " />
+  <img align="center" src="/previews/boolflix.gif" alt="Gif boolflix" />
   
   <br/> &nbsp;
   
-  <img align="center" src="/previews/boolflix-thumbs.png" alt="Thumbnails crud" />
+  <img align="center" src="/previews/boolflix-thumb.png" alt="Thumbnails boolflix" />
  <div>
    
 --------
