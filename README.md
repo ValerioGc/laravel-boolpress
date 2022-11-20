@@ -1,6 +1,6 @@
-# laravel-base-crud
+# laravel-boolpress
 
-> _Reproduction of a web-page that display information about comics with CRUD_
+> _Reproduction of a blog with a CMS for crreating content using CRUD, API and Laravel Auth. Front-end made with Vue-router_
  
 <br />
 
