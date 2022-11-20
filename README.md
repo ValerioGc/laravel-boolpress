@@ -98,11 +98,11 @@
 ## *_Previews:_*
 
 <div align="center">
-  <img align="center" src="/previews/boolflix.gif" alt="Gif boolflix" />
+  <img align="center" src="/previews/boolpress.gif" alt="Gif boolpress" />
   
   <br/> &nbsp;
   
-  <img align="center" src="/previews/boolflix-thumb.png" alt="Thumbnails boolflix" />
+  <img align="center" src="/previews/boolpress-thumbs.png" alt="Thumbnails boolpress" />
  <div>
    
 --------
@@ -113,12 +113,12 @@
   
   <br/>
 
-  <img src="/previews/boolflix.png" alt="preview1" /> 
-  <img src="/previews/boolflix2.png" alt="preview2" /> 
-  <img src="/previews/boolflix3.png" alt="preview3" /> 
-  <img src="/previews/boolflix4.png" alt="preview4" /> 
-  <img src="/previews/boolflix3.png" alt="preview5" /> 
-  <img src="/previews/boolflix4.png" alt="preview6" /> 
+  <img src="/previews/boolpress.png" alt="preview1" /> 
+  <img src="/previews/boolpress2.png" alt="preview2" /> 
+  <img src="/previews/boolpress3.png" alt="preview3" /> 
+  <img src="/previews/boolpress4.png" alt="preview4" /> 
+  <img src="/previews/boolpress3.png" alt="preview5" /> 
+  <img src="/previews/boolpress4.png" alt="preview6" /> 
 </details>
 
 --------
